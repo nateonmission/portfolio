@@ -179,76 +179,87 @@ main{
     }
   }
 */
-  @media screen and (max-width: 800px) {
-    body {
-      font-size: 0.75rem;
-    }
-    header {
-      flex-direction: column;
-    }
-    #icon {
-      font-size: 4rem;
-      padding: 0 1rem;
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 0.75rem;
   }
-  
+
+  header {
+    flex-direction: column;
+  }
+  #icon {
+    font-size: 4rem;
+    padding: 0 1rem;
+}
+
   .mobile-name {
     display: block;
   }
 
+  UL#nav > li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin: 1rem auto;
+    align-self: center;
+}
+
   #outter {
     border: none;
-}
+  }
 
-#inner {
-  border: 1px goldenrod solid;
-  margin: 0.5rem;
-  padding: 1REM;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  #inner {
+    border: 1px goldenrod solid;
+    margin: 0.5rem;
+    padding: 1REM;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-#screen {
-  border: none;
-  border-radius: 12REM;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-}
+  #screen {
+    border: none;
+    border-radius: 12REM;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 
-#photo {
+  #photo {
+    align-self: center;
+    max-width: 12rem;
+    margin: 1REM;
+  }
+
+  #photo img {
   text-align: center;
+  margin: auto;
   max-width: 12rem;
-  margin: 1REM;
+  border: 2px goldenrod solid;
+  border-radius: 6REM;
   z-index: 1;
   position: relative;
 
-}
-
-#photo img {
-text-align: center;
-margin: auto;
-max-width: 12rem;
-border: 2px goldenrod solid;
-border-radius: 6REM;
-z-index: 1;
-position: relative;
-
-}
-
-#name {
-display: none;
-}
-
-#bio {
-padding: 1REM;
-border-radius: 5REM;
-border: none;
-margin: 1REM;
-line-height: 1.25rem;
-}
-
-
   }
+
+  #name {
+  display: none;
+  }
+
+  #bio {
+  text-align: center;
+  padding: 1REM;
+  border-radius: 5REM;
+  border: none;
+  margin: 1REM;
+  line-height: 1.25rem;
+  }
+
+  #contact {
+    border: none;
+  }
+
+
+}
