@@ -25,6 +25,10 @@ footer {
     padding: 0 1rem;
 }
 
+.mobile-name {
+  display: none;
+}
+
 ul {
     /*border: 1px steelblue solid;*/
 }
@@ -38,6 +42,7 @@ UL#nav > li {
     text-decoration: none;
     list-style: none;
     display: inline-block;
+    margin: 1rem auto;
 }
 
 a.nav {
@@ -75,7 +80,7 @@ main{
   #outter {
       border: 1px goldenrod solid;
       margin: 0.5rem;
-      width: 60%;
+      max-width: 80%;
   }
 
   #inner {
@@ -91,32 +96,39 @@ main{
     border: 1px goldenrod solid;
     border-radius: 12REM;
     margin: 2rem auto;
-    max-width: 80%;
     display: grid;
-    grid-template-columns: 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem;
-    grid-template-columns: 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
   }
   
-  #me {
+  #photo {
       text-align: center;
       max-width: 12rem;
-      /*border-radius: 6REM;*/
-      border: 2px goldenrod solid;
       margin: 1REM;
-      grid-row: 1 ;
-      grid-column: 1;
+      grid-row: 1  ;
+      grid-column: 2 / 3;
       z-index: 1;
       position: relative;
 
   }
+
+  #photo img {
+    text-align: center;
+    max-width: 12rem;
+    border: 2px goldenrod solid;
+    border-radius: 6REM;
+    z-index: 1;
+    position: relative;
+
+}
 
   #name {
     padding: 1REM;
     border-radius: 5REM;
     border: 2px goldenrod solid;
     margin: 1REM;
-    grid-row: 4 / 6;
-    grid-column: 3 / 9;
+    grid-row: 1  ;
+    grid-column: 3 / 8;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -127,8 +139,10 @@ main{
     border-radius: 5REM;
     border: 2px goldenrod solid;
     margin: 1REM;
+    line-height: 1.25rem;
     grid-row: 2 ;
-    grid-column: 5 / 9;
+    grid-column: 2 / 8;
+
   }
 
   .gridline{
@@ -150,4 +164,90 @@ main{
     justify-content: center;
     margin: 1rem;;
     border: 1px goldenrod solid;
+  }
+  #contact p {
+    align-self: center;
+  }
+
+  h2, h3 {
+    align-self: center;
+  }
+
+  @media screen and (max-width: 850px) {
+    body {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media screen and (max-width: 725px) {
+    body {
+      font-size: 0.75rem;
+    }
+    header {
+      flex-direction: column;
+    }
+    #icon {
+      font-size: 4rem;
+      padding: 0 1rem;
+  }
+  
+  .mobile-name {
+    display: block;
+  }
+
+  #outter {
+    border: none;
+}
+
+#inner {
+  border: 1px goldenrod solid;
+  margin: 0.5rem;
+  padding: 1REM;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#screen {
+  border: none;
+  border-radius: 12REM;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+#photo {
+  text-align: center;
+  max-width: 12rem;
+  margin: 1REM;
+  z-index: 1;
+  position: relative;
+
+}
+
+#photo img {
+text-align: center;
+margin: auto;
+max-width: 12rem;
+border: 2px goldenrod solid;
+border-radius: 6REM;
+z-index: 1;
+position: relative;
+
+}
+
+#name {
+display: none;
+}
+
+#bio {
+padding: 1REM;
+border-radius: 5REM;
+border: none;
+margin: 1REM;
+line-height: 1.25rem;
+}
+
+
   }
